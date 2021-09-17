@@ -21,7 +21,7 @@ function gamestart() {
   //console.log(rn);
   var color = colors[rn];
   var colorid = "#" + color;
-  var audiofilename = "sounds/" + color + ".mp3";
+  var audiofilename = color + ".mp3";
   var audio = new Audio(audiofilename);
   gamepattern.push(color);
   //console.log(color + " " + colorid + " " + audiofilename + " " + audio);
@@ -86,6 +86,6 @@ function gameover()
     setTimeout(function(){
       $("body").removeClass('game-over');
     }, 200);
-    var wa = new Audio("sounds/wrong.mp3");
+    var wa = new Audio("wrong.mp3");
     wa.play();
 }
